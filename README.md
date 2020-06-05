@@ -29,6 +29,14 @@ R1, R1L, R1R respectively
 ## Examples
 ### Add 2 Values
 Assuming the 2 rows are sequential (R0, R1)</br>
-    DR\<U\>D]
+`DR<U>D]`</br>
 This loops until the Right beads of the R1 is 0</br>
 Each time **R1R-1** and then **R0R+1**
+### Multiplying 2 Values
+Assuming the 2 rows are sequential (R0, R1)</br>
+`R<UR<DD>D>UUU]DDR<UU>DD]U]`</br>
+**R1R-1**</br>
+Destructively duplicates **R0** into **R2**, **R3**</br>
+Copies **R2** back to **R0**</br>
+This loops till **R1R**==0</br>
+Hence **R3** will become the multiplied sum

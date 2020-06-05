@@ -8,6 +8,8 @@ Memory composes of Rods, which hold Beads.</br>
 By default (**const unsigned int LeftStart = 10**) each Rod starts with 10 Beads on the left,</br>
 These can only be shifted from one side of the Rod to the other.</br>
 **NEVER** creating going above the initial 10 Beads total on the Rod.
+#### Note
+This means the code cannot overflow or underflow, so you may end up with values capping at **LeftStart** or 0!
 ### Instructions
 | Char | Effect |
 |--|--|

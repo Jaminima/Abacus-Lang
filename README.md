@@ -18,6 +18,7 @@ These can only be shifted from one side of the Rod to the other.</br>
 | L | Do if Left **NOT** 0 |
 | R | Do if Right **NOT** 0 |
 | ] | End of if |
+| T | Display Memory |
 Console R/W coming soon
 ## Notation
 Rod 0 = R0</br>
@@ -40,3 +41,5 @@ Destructively duplicates **R0** into **R2**, **R3**</br>
 Copies **R2** back to **R0**</br>
 This loops till **R1R**==0</br>
 Hence **R3** will become the multiplied sum
+### Fibinachi Sequence
+`>>>>>>>DD>UURDDRD]UR<D>D>UU]DDR<UU>DD]UUUR<DD>D>UUU]DDDR<UUU>DDD]URU]U]T`

@@ -1,14 +1,14 @@
 #include <iostream>
 
-const unsigned int LeftStart = 10;
+const unsigned int LeftStart = 10000;
 const unsigned int Rows = 32;
 
-const char* Instructions = ">>R<]";
+const char* Instructions = ">>>>>>>>>>DD>UU R DDRD]U R<D>D>UU] DD R<UU>DD] UUU R<DD>D>UUU] DDD R<UUU>DDD] U RU] U ] T";
 
 class Rod {
 public:
-    int Left = LeftStart;
-    int Right = 0;
+    unsigned int Left = LeftStart;
+    unsigned int Right = 0;
 };
 
 Rod Rods[Rows];
@@ -33,6 +33,20 @@ void GotoStartLoop(unsigned int& i) {
     i--;
 }
 
+void PrintMemory(bool Simple = true) {
+    for (unsigned int i = 0; i < Rows; i++) {
+        if (Simple) {
+            std::cout << Rods[i].Left;
+            std::cout << '-';
+            std::cout << Rods[i].Right;
+            std::cout << " -- ";
+        }
+        else {
+            //Show Abacus Like Output
+        }
+    }
+}
+
 void DoExec()
 {
     unsigned int i = 0;
@@ -43,6 +57,10 @@ void DoExec()
 
         switch (C)
         {
+
+        case 'T':
+            PrintMemory();
+            break;
 
         case '>':
             if (Rods[R].Left > 0) {
